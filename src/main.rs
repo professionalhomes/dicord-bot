@@ -33,6 +33,7 @@ async fn handle_event(event: Event, id: u64, parser: &Parser<'_>, client: Client
 async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
 
     let args: Vec<String> = env::args().collect();
+    
     let token = &args[1];
 
     let scheme = ShardScheme::try_from((0..1, 1))?;
